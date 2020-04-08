@@ -8,5 +8,29 @@
 </head>
 <body>
     <h1>{{ title }}</h1>
+
+    {% if age >= 18 %}
+        <p>Vous êtes un adulte</p>
+    {% elseif age >= 12 %}
+        <p>Vous êtes un adolescent</p>
+    {% else %}
+        <p>Vous êtes un enfant</p>
+    {% endif %}
+
+    <ul>
+        {% for compteur in 0..10 %}
+            <li>{{ compteur }}</li>
+        {% endfor %}
+    </ul>
+
+    {% for prenom, age in tableau %}
+        {% if loop.first %}
+            <strong>{{ loop.index }} - {{ prenom }} a {{ age }} ans</strong>
+        {% elseif loop.last %}
+            <em>{{ loop.index }} - {{ prenom }} a {{ age }} ans</em>
+        {% else %}
+            <p>{{ loop.index }} - {{ prenom }} a {{ age }} ans</p>
+        {% endif %}
+    {% endfor %}
 </body>
 </html>
