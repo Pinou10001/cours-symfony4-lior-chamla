@@ -9,8 +9,8 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends Controller {
 
     /**
-     * @Route("/hello/{prenom}/{age}", name="hello")
-     * @Route("/hello")
+     * @Route("/bonjour/{prenom}/{age}", name="hello")
+     * @Route("/salut", name="hello_base")
      * Montre la page qui dit bonjour
      */
     public function hello($prenom = "anonyme", $age = 0) {

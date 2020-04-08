@@ -11,6 +11,8 @@
 
     <p>Le vrai titre est {{ title }}</p>
 
+    <a href="{{ path('hello', {'prenom': 'Martin', 'age': 20}) }}">Allez voir Hello</a>
+
     {#
     {% if age >= 18 %}
         <p>Vous êtes un adulte</p>
