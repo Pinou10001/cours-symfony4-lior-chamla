@@ -12,7 +12,10 @@ class HomeController extends Controller {
      */
     public function home(){
         return $this->render(
-            'home.html.twig'
+            'home.html.twig',
+            [
+                'title' => "Bonjour à tous"
+            ]
         );
     }
 
