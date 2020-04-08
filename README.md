@@ -1,3 +1,7 @@
+# Project
+
+Symfony 4 curse by Lior Chamla (https://learn.web-develop.me/courses/symfony-4-les-fondamentaux-par-la-pratique/).
+
 # Docker Boilerplate
 
 Made by [Martin Soenen](https://github.com/Pinou10001) & available on GitHub.
