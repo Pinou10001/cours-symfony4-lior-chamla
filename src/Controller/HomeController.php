@@ -14,7 +14,13 @@ class HomeController extends Controller {
      * Montre la page qui dit bonjour
      */
     public function hello($prenom = "anonyme", $age = 0) {
-        return new Response("Bonjour " . $prenom . ", vous avez " . $age . " ans.");
+        return $this->render(
+            'hello.html.twig',
+            [
+                'prenom' => $prenom,
+                'age' => $age
+            ]
+        );
     }
 
     /**

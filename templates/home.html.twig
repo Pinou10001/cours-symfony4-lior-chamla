@@ -1,12 +1,14 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mon application</title>
-</head>
-<body>
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Bonsoir à tous !
+{% endblock %}
+
+{% block header %}
+    <h2>Voici le header</h2>
+{% endblock %}
+
+{% block body %}
     <h1>{{ title | upper }}</h1>
 
     <p>Le vrai titre est {{ title }}</p>
@@ -38,5 +40,4 @@
             <p>{{ loop.index }} - {{ prenom }} a {{ age }} ans</p>
         {% endif %}
     {% endfor %}
-</body>
-</html>
+{% endblock %}
