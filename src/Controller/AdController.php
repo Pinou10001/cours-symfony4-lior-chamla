@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Ad;
 use App\Repository\AdRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -38,6 +39,12 @@ class AdController extends AbstractController
             ->add('rooms')
             ->add('price')
             ->add('coverImage')
+            ->add('save', SubmitType::class, [
+                'label' => 'Créer la nouvelle annonce',
+                'attr' => [
+                    'class' => 'btn btn-primary'
+                ]
+            ])
             ->getForm();
 
         return $this->render('ad/new.html.twig', [
