@@ -14,7 +14,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  * @ORM\HasLifecycleCallbacks()
  * @UniqueEntity(
- *     fields={'email'},
+ *     fields={"email"},
  *     message="Un autre utilisateur s'est déjà inscrit avec cette adresse email, merci de la modifier"
  * )
  */
