@@ -69,7 +69,7 @@ class Booking
             $this->createdAt = new \DateTime();
         }
 
-        if (empty($this->$this->amount)) {
+        if (empty($this->amount)) {
             // prix de l'annonce * nombre de jours où je vais rester
             $this->amount = $this->ad->getPrice() * $this->getDuration();
         }
