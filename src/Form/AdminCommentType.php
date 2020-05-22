@@ -7,12 +7,12 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class EditCommentType extends ApplicationType
+class AdminCommentType extends ApplicationType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('content', TextareaType::class, $this->getConfiguration("Contenu du commentaire", "Voici le contenu du commentaire"))
+            ->add('content', TextareaType::class, $this->getConfiguration("Contenu du commentaire", "Modifiez/corrigez le contenu du commentaire"))
         ;
     }
 

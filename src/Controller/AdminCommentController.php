@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Comment;
 use App\Form\CommentType;
-use App\Form\EditCommentType;
+use App\Form\AdminCommentType;
 use App\Repository\CommentRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -25,7 +25,7 @@ class AdminCommentController extends AbstractController
     }
 
     /**
-     * Permet d'afficher le formulaire d'édition
+     * Permet de modifier un commentaire
      *
      * @Route("/admin/comment/{id}/edit", name="admin_comments_edit")
      *
@@ -33,7 +33,7 @@ class AdminCommentController extends AbstractController
      * @return Response
      */
     public function edit(Comment $comment, Request $request, EntityManagerInterface $manager) {
-        $form = $this->createForm(EditCommentType::class, $comment);
+        $form = $this->createForm(AdminCommentType::class, $comment);
 
         $form->handleRequest($request);
 
