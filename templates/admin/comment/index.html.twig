@@ -23,7 +23,7 @@
             {% for comment in comments %}
                 <tr>
                     <td>{{ comment.id }}</td>
-                    <td>{{ comment.createdAt | date }}</td>
+                    <td>{{ comment.createdAt | date('d/m/Y H:i') }}</td>
                     <td>
                         <img src="{{ comment.author.picture }}" alt="Avatar de {{ comment.author.fullName }}" class="avatar avatar-micro mr-2">
                         {{ comment.author.fullName }}

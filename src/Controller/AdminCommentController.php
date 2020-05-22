@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AdminCommentController extends AbstractController
 {
     /**
-     * @Route("/admin/comments", name="admin_comments")
+     * @Route("/admin/comments", name="admin_comments_index")
      */
     public function index(CommentRepository $repo)
     {
