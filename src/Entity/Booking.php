@@ -60,9 +60,10 @@ class Booking
     private $comment;
 
     /**
-     * Callback appelé à chaque fois qu'on crée une réservation
+     * Callback appelé à chaque fois qu'on crée ou modifie une réservation
      *
      * @ORM\PrePersist()
+     * @ORM\PreUpdate()
      *
      * @return void
      */
