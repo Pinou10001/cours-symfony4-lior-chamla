@@ -15,7 +15,7 @@ class PaginationService {
     private $route;
     private $templatePath;
 
-    public function __construct(EntityManagerInterface $manager, Environment $twig, RequestStack $request, $templatePath) {
+    public function __construct(EntityManagerInterface $manager, Environment $twig, RequestStack $request, string $templatePath) {
         $this->route = $request->getCurrentRequest()->attributes->get('_route');
         $this->manager = $manager;
         $this->twig = $twig;
@@ -23,6 +23,10 @@ class PaginationService {
     }
 
     public function getData() {
+        if (empty($this->entityClass)) {
+            throw new \Exception("Vous n'avez pas spécifié l'entité sur laquelle nous devons paginer ! Utilisez la méthode setEntityClass() de votre objet PaginationService !");
+        }
+
         $offset = $this->currentPage * $this->limit - $this->limit;
 
         $repo = $this->manager->getRepository($this->entityClass);
@@ -32,6 +36,10 @@ class PaginationService {
     }
 
     public function getPages() {
+        if (empty($this->entityClass)) {
+            throw new \Exception("Vous n'avez pas spécifié l'entité sur laquelle nous devons paginer ! Utilisez la méthode setEntityClass() de votre objet PaginationService !");
+        }
+
         $repo = $this->manager->getRepository($this->entityClass);
         $total = count($repo->findAll());
 
