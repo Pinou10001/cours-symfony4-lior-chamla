@@ -6,7 +6,7 @@
 
         <meta name="viewport" content="width=device-width, user-scalable=no">
 
-        <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+        {{ encore_entry_link_tags('css/app') }}
         <script src="https://kit.fontawesome.com/ad0fa22932.js" crossorigin="anonymous"></script>
         {% block stylesheets %}{% endblock %}
     </head>
@@ -17,9 +17,7 @@
 
         {% include 'partials/footer.html.twig' %}
 
-        <script src=""></script>
-        <script src=""></script>
-        <script src=""></script>
+        {{ encore_entry_script_tags('js/app') }}
         {% block javascripts %}{% endblock %}
     </body>
 </html>
