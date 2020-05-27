@@ -12,5 +12,9 @@
         "dev": "encore dev",
         "watch": "encore dev --watch",
         "build": "encore production --progress"
+    },
+    "dependencies": {
+        "@babel/core": "^7.10.0",
+        "@babel/preset-env": "^7.10.0"
     }
 }
