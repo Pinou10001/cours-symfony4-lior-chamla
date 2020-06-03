@@ -1,11 +1,6 @@
 # Project
 
-Symfony 4 curse by Lior Chamla (https://learn.web-develop.me/courses/symfony-4-les-fondamentaux-par-la-pratique).
-
-Using Symfony & SASS.
-
-Available in [symbnb.martinsoenen.com](http://symbnb.martinsoenen.com).
-
+Symfony 4 curse by Lior Chamla (https://learn.web-develop.me/courses/symfony-4-les-fondamentaux-par-la-pratique/).
 
 Using Symfony & SASS.
 
