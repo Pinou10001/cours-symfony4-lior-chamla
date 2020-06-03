@@ -1,6 +1,6 @@
 # Project
 
-Symfony 4 curse by Lior Chamla (https://learn.web-develop.me/courses/symfony-4-les-fondamentaux-par-la-pratique/).
+Symfony 4 curse by Lior Chamla (https://learn.web-develop.me/courses/symfony-4-les-fondamentaux-par-la-pratique).
 
 Using Symfony & SASS.
 
@@ -9,9 +9,9 @@ Available in [symbnb.martinsoenen.com](http://symbnb.martinsoenen.com).
 
 # Docker Boilerplate
 
-Made by [Martin Soenen](https://github.com/Pinou10001) & available on GitHub.
+Made by [Martin Soenen](https://github.com/Pinou10001) & available on [GitHub](https://github.com/Pinou10001/Docker-boilerplate-PHP-FPM-MySQL-Composer-PHPMyAdmin-Nginx-MailHog).
 
-Containers created in a base of [https://phpdocker.io].
+Containers created in a base of [phpdocker.io](https://phpdocker.io).
 
   | Services installed in this boilerplate | Installation container |
   |----------------------------------------|------------------------|
