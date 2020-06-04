@@ -1,12 +1,17 @@
 # Project
 
-Symfony 4 curse by Lior Chamla (https://learn.web-develop.me/courses/symfony-4-les-fondamentaux-par-la-pratique/).
+Symfony 4 curse by Lior Chamla (https://learn.web-develop.me/courses/symfony-4-les-fondamentaux-par-la-pratique).
+
+Using Symfony & SASS.
+
+Available in [symbnb.martinsoenen.com](http://symbnb.martinsoenen.com).
+
 
 # Docker Boilerplate
 
-Made by [Martin Soenen](https://github.com/Pinou10001) & available on GitHub.
+Made by [Martin Soenen](https://github.com/Pinou10001) & available on [GitHub](https://github.com/Pinou10001/Docker-boilerplate-PHP-FPM-MySQL-Composer-PHPMyAdmin-Nginx-MailHog).
 
-Containers created in a base of [https://phpdocker.io].
+Containers created in a base of [phpdocker.io](https://phpdocker.io).
 
   | Services installed in this boilerplate | Installation container |
   |----------------------------------------|------------------------|
@@ -19,31 +24,15 @@ Containers created in a base of [https://phpdocker.io].
   | MailHog                                | mailhog                |
 
 
-## First install
-
-Fill in the variable names in the `.env` file specific to your project.  
+## Install
 
 Build the Docker containers : `docker-compose build`.  
 Once this is done, you can run the containers : `docker-compose up -d`.  
 
 At the first launch after building the containers, wait a few seconds for MySQL to launch properly.
 
-To install Symfony, you need to run a composer command : `docker-compose exec php  composer create-project
- symfony/website-skeleton my-project`.  
-*Note : if you want to install Symfony 4.4, you should run `docker-compose exec php  composer create-project symfony
- /website-skeleton my-project` instead of the one above.*  
-                                                              
-Now you can find a folder called `my-project`, and Symfony is inside. Just move the files from this
- folder to the boilerplate base and delete the `my-project` folder because it is now empty. Make sure to not replace the
- .env file, you have to merge it to keep the contents of the 2 .env files.  
-
-Now, you need to set the database address in the .env file. So you have to replace `DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7`
-by `DATABASE_URL="mysql://${MYSQL_USER}:${MYSQL_PASSWORD}@mysql:3306/${DATABASE_NAME}"`
-
 The project is now available if you go to the URL `localhost` !  
 If you want to have a better URL, you can add the following line to your hosts file `127.0.0.1 ${PROJECT_URL}` and the project will be available on the URL you set in the PROJECT_URL line of your .env file !  
-
-You can put your project files at the root of this boilerplate.
 
 
 ## Accessing services
