@@ -1,0 +1,54 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Administration des utilisateurs{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <h1 class="my-5">Administration des utilisateurs</h1>
+
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Photo</th>
+                <th>Nom - prénom</th>
+                <th>Administrateur</th>
+                <th>Annonces</th>
+                <th>Réservations</th>
+                <th>Commentaires postés</th>
+                <th></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for user in pagination.data %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>
+                        <img src="{{ user.picture }}" alt="Avatar de {{ user.fullName }}" class="avatar avatar-micro mr-2">
+                    </td>
+                    <td>
+                        <a href="{{ path('user_show', {'slug': user.slug} ) }}">{{ user.fullName }}</a>
+                    </td>
+                    <td>
+                        {% if user.isAdmin %}
+                            <span class="badge badge-success rounded">Oui</span>
+                        {% else %}
+                            <span class="badge badge-light rounded">Non</span>
+                        {% endif %}
+                    </td>
+                    <td><span class="badge badge-dark rounded">{{ user.ads | length }} annonces</span></td>
+                    <td><span class="badge badge-dark rounded">{{ user.bookings | length}} réservations</span></td>
+                    <td><span class="badge badge-dark rounded">{{ user.comments | length}} avis</span></td>
+                    <td>
+                        <a href="{{ path('admin_user_edit', {'id': user.id}) }}" class="btn btn-primary"><i class="fas fa-pen"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        {{ pagination.display }}
+    </div>
+
+{% endblock %}

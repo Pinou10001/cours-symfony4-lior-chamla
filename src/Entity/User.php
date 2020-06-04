@@ -98,8 +98,26 @@ class User implements UserInterface
      */
     private $comments;
 
+    /**
+     * Permet d'obtenir le nom complet de l'utilisateur
+     *
+     * @return string
+     */
     public function getFullName() {
         return "{$this->firstName} {$this->lastName}";
+    }
+
+    /**
+     * Permet de savoir si l'utilisateur est administrateur ou non
+     *
+     * @return bool
+     */
+    public function isAdmin() {
+        if (in_array("ROLE_ADMIN", $this->getRoles())) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
